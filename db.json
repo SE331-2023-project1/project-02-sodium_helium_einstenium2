@@ -1,0 +1,211 @@
+{
+
+  "students": [
+    {
+      "id": 1,
+      "studentID": "SE-001",
+      "name": "Yanwarut",
+      "surname": "Suksawat",
+      "image": "/src/assets/images/Student1.JPG",
+      "advisorId": 3,
+      "courses": ["Math","Ethnobotany"]
+
+    },
+
+    {
+      "id": 2,
+      "studentID": "SE-002",
+      "name": "Cherprang ",
+      "surname": "BNK48",
+      "image": "/src/assets/images/Student22.jpg",
+      "advisorId": 6,
+      "courses": ["Math","Sexual Health Studies"]
+    },
+    {
+      "id": 3,
+      "studentID": "SE-003",
+      "name": "Nobi",
+      "surname": "Nobita",
+      "image": "/src/assets/images/Student6.jpg",
+      "advisorId": 1,
+      "courses": ["Ethical Hacking","Geomancy"]
+
+    },
+    {
+      "id": 4,
+      "studentID":"SE-004",
+      "name": "Asher",
+      "surname": "Barton",
+      "image": "/src/assets/images/Student7.jpg",
+      "advisorId": 1,
+      "courses": ["Fire Engineering","Geomancy"]
+    },
+    {
+      "id": 5,
+      "studentID":"SE-005",
+      "name": "Ignatius",
+      "surname": "Sears",
+      "image": "/src/assets/images/Student8.jpg",
+      "advisorId": 4,
+      "courses": ["Math","Dairy Herd Management"]
+    },
+    {
+      "id": 6,
+      "studentID":"SE-006",
+      "name": "Rebecca",
+      "surname": "Gordon",
+      "image": "/src/assets/images/Student3.png",
+      "advisorId": 2,
+      "courses": ["Math","Surf Science"]
+    },
+    {
+      "id": 7,
+      "studentID":"SE-007",
+      "name": "Upton",
+      "surname": "Glover",
+      "image": "/src/assets/images/Student4.jpg",
+      "advisorId": 3,
+      "courses": ["Math","Lady Gaga and the Sociology of Fame"]
+    },
+    {
+      "id": 8,
+      "studentID":"SE-008",
+      "name": "Macon",
+      "surname": "Albert",
+      "image": "/src/assets/images/Student5.jpg",
+      "advisorId": 3,
+      "courses": ["Math","Geomancy"]
+    },
+    {
+      "id": 9,
+      "studentID":"SE-009",
+      "name": "Kru",
+      "surname": "Kaikaew",
+      "image": "/src/assets/images/Student9.jpg",
+      "advisorId": 2,
+      "courses": ["Classic Sanskrit","Defense Against the Dark Arts"]
+    },
+    {
+      "id": 10,
+      "studentID":"SE-010",
+      "name": "Robert",
+      "surname": "Oppenheimer",
+      "image": "/src/assets/images/Student27.jpg",
+      "advisorId": 2,
+      "courses": ["chemistry-physics","nuclear"]
+    },
+    {
+      "id": 11,
+      "studentID":"SE-011",
+      "name": "Walter",
+      "surname": "White",
+      "image": "/src/assets/images/Student26.jpg",
+      "advisorId": 5,
+      "courses": ["chemistry","crystal meth"]
+    },
+    {
+      "id": 12,
+      "studentID":"SE-012",
+      "name": "Jesse",
+      "surname": "Pinkeman",
+      "image": "/src/assets/images/Student12.jpg",
+      "advisorId": 5,
+      "courses": ["chemistry","crystal meth"]
+    },
+    {
+      "id": 13,
+      "studentID":"SE-013",
+      "name": "P'To",
+      "surname": "Sillyfool",
+      "image": "/src/assets/images/Student13.jpg",
+      "advisorId": 5,
+      "courses": ["dancing","Sexual Health Studies"]
+    },
+    {
+      "id": 14,
+      "studentID":"SE-014",
+      "name": "Vin",
+      "surname": "Diesel",
+      "image": "/src/assets/images/Student23.jpg",
+      "advisorId": 2,
+      "courses": ["Mechanical engineering","family"]
+    },
+    {
+      "id": 15,
+      "studentID":"SE-666",
+      "name": "Jesus",
+      "surname": "Christ",
+      "image": "/src/assets/images/Student17.jpg",
+      "advisorId": 6,
+      "courses": ["Defense Against the Dark Arts","Buddhism"]
+    },
+    {
+      "id": 16,
+      "studentID":"SE-015",
+      "name": "Liu",
+      "surname": "Kang",
+      "image": "/src/assets/images/Student18.jpg",
+      "advisorId": 5,
+      "courses": ["chinese","Lady Gaga and the Sociology of Fame"]
+    },
+    {
+      "id": 17,
+      "studentID":"SE-016",
+      "name": "John",
+      "surname": "Kratos",
+      "image": "/src/assets/images/Student20.jpg",
+      "advisorId": 6,
+      "courses": ["mythology","Geomancy"]
+    },
+    {
+      "id": 18,
+      "studentID":"SE-017",
+      "name": "Ching-Cheng",
+      "surname": "Hanji",
+      "image": "/src/assets/images/Student21.jpg",
+      "advisorId": 5,
+      "courses": ["dancing","singing"]
+    }
+
+  ],
+  "advisors": [
+  {
+    "id": 1,
+    "name":"Master",
+    "surname":"Roshi",
+    "image":"https://i.ibb.co/9qyLBJm/Master-roshi-enhanced.webp"
+  },
+  {
+    "id": 2,
+    "name":"Doctor",
+    "surname":"Fish",
+    "image":"https://storage-wp.thaipost.net/2022/05/%E0%B8%AB%E0%B8%A1%E0%B8%AD%E0%B8%9B%E0%B8%A5%E0%B8%B2-3.jpg"
+  },
+  {
+    "id": 3,
+    "name":"Ricardo",
+    "surname":"Milos",
+    "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKuytkKRrbL9cS7FhwW8ywHptwKj0oE63Fz0MUKuvBgrltibfwXvmBHUeadM_nreicaqs&usqp=CAU"
+  },
+  {
+    "id": 4,
+    "name":"Billy",
+    "surname":"Herrington",
+    "image":"https://i1.sndcdn.com/avatars-000411292317-dt2f28-t500x500.jpg"
+  },
+  {
+    "id": 5,
+    "name":"Dreamy",
+    "surname":"Bull",
+    "image":"https://i1.sndcdn.com/artworks-CnVRs1wSaUG51r6t-hYuXBA-t500x500.jpg"
+  },
+  {
+    "id": 6,
+    "name":"Ne",
+    "surname":"Hofatura",
+    "image":"https://i.ytimg.com/vi/BduL0t1Eg1k/maxresdefault.jpg"
+  }
+]
+
+    
+}
