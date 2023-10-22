@@ -1,23 +1,22 @@
-import type { CommentInfo } from '@/info';
-import { defineStore } from 'pinia';
+import type { CommentInfo } from '@/info'
+import { defineStore } from 'pinia'
 
-export const useCommentStore = defineStore('comment',{
+export const useCommentStore = defineStore('comment', {
   state: () => ({
-    comments : [] as CommentInfo[]
+    comments: [] as CommentInfo[]
   }),
   actions: {
-    addComment(comment: CommentInfo){
+    addComment(comment: CommentInfo) {
       this.$patch((state) => {
-       state.comments.push(comment);
-    });
+        state.comments.push(comment)
+      })
     },
     getComments() {
       const result = this.comments
       return result
-  },
-  getCommentByStudentId(studentId: string){
-    return this.comments.filter(comment => comment.student_id == studentId)
+    },
+    getCommentByStudentId(studentId: string) {
+      return this.comments.filter((comment) => comment.student_id == studentId)
+    }
   }
-  
-}
 })

@@ -37,7 +37,14 @@ function onSubmit() {
   <form class="create-advisor" @submit.prevent="onSubmit">
     <div class="flex flex-col items-center">
       <label for="id">Professor Id: </label>
-      <input min="1" placeholder="Ex: 123" class="text-black" id="id" type="number" v-model="form.id" />
+      <input
+        min="1"
+        placeholder="Ex: 123"
+        class="text-black"
+        id="id"
+        type="number"
+        v-model="form.id"
+      />
 
       <label for="name">Professor Name: </label>
       <input placeholder=" Ex: Yanwarut" class="text-black" id="name" v-model="form.name" />
@@ -46,7 +53,7 @@ function onSubmit() {
       <input placeholder=" Ex: Suksawat" class="text-black" id="surname" v-model="form.surname" />
 
       <label for="image">Professor Image: </label>
-      <input  placeholder=" Image Link" class="text-black" id="image" v-model="form.image" />
+      <input placeholder=" Image Link" class="text-black" id="image" v-model="form.image" />
 
       <input
         class="mt-5 text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"

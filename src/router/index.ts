@@ -22,14 +22,14 @@ const router = createRouter({
       name: 'student-list',
       component: StudentListView,
       props: (route) => ({
-        page: parseInt(route.query?.page as string || '1'),
-        perPage: parseInt(route.query?.perPage as string || '6') 
-      }),
+        page: parseInt((route.query?.page as string) || '1'),
+        perPage: parseInt((route.query?.perPage as string) || '6')
+      })
     },
     {
       path: '/advisor',
       name: 'advisor-list',
-      component: AdvisorListView,
+      component: AdvisorListView
     },
     {
       path: '/create-advisor',
@@ -38,7 +38,7 @@ const router = createRouter({
     },
     {
       path: '/',
-      name:  'student-layout',
+      name: 'student-layout',
       component: StudentLayoutView,
       props: true,
       beforeEnter: (to) => {
@@ -46,23 +46,22 @@ const router = createRouter({
         const studentStore = useStudentStore()
         const advisorStore = useAdvisorStore()
         return StudentService.getStudentById(id)
-        .then((response) => {
-          studentStore.setStudent(response.data)
-          AdvisorService.getAdvisorById(response.data.advisorId)
           .then((response) => {
-            advisorStore.setAdvisor(response.data)
+            studentStore.setStudent(response.data)
+            AdvisorService.getAdvisorById(response.data.advisorId).then((response) => {
+              advisorStore.setAdvisor(response.data)
+            })
           })
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+          .catch((error) => {
+            console.log(error)
+          })
       },
       children: [
         {
           path: '/student/:id',
           name: 'student-detail',
           component: StudentDetailView,
-          props:true
+          props: true
         },
         {
           path: '/add-data/:id',
@@ -74,7 +73,7 @@ const router = createRouter({
           path: '/comment/:id',
           name: 'student-comment',
           component: StudentCommentView,
-          props:true
+          props: true
         }
       ]
     },
@@ -86,34 +85,34 @@ const router = createRouter({
         const id: number = parseInt(to.params.id as string)
         const advisorStore = useAdvisorStore()
         return AdvisorService.getAdvisorById(id)
-        .then((response) => {
-          advisorStore.setAdvisor(response.data)
-        }).catch((error) => {
-          console.log(error)
-        })
+          .then((response) => {
+            advisorStore.setAdvisor(response.data)
+          })
+          .catch((error) => {
+            console.log(error)
+          })
       },
       children: [
         {
           path: '/advisor/:id',
           name: 'advisor-detail',
-          component: AdvisorDetailView,
-        },
+          component: AdvisorDetailView
+        }
       ]
     },
     {
       path: '/create-advisor/:id',
       name: 'advisor-create-detail',
       component: AdvisorCreatedDetailVue,
-      props:true
+      props: true
     }
   ]
-  
 })
-router.beforeEach(() =>{
+router.beforeEach(() => {
   NProgress.start()
 })
 
-router.afterEach(() =>{
+router.afterEach(() => {
   NProgress.done()
 })
 export default router

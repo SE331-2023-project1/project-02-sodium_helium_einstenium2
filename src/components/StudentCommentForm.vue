@@ -39,17 +39,17 @@ function onSubmit() {
     <div class="flex flex-col items-center">
       <div>
         <label for="comment">Add Comment</label>
-        <br>
+        <br />
         <textarea class="text-black" id="comment" v-model="form.comment"></textarea>
       </div>
       <div>
         <label for="date">Date:</label>
-        <br>
+        <br />
         <input class="text-black" id="date" v-model="form.date" />
       </div>
       <div>
         <label for="professor_name">Professor Name: </label>
-        <br>
+        <br />
         <input class="text-black" id="professor_name" v-model="form.professor_name" />
       </div>
       <input
