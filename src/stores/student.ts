@@ -19,6 +19,9 @@ export const useStudentStore = defineStore('student', {
       const result = this.students
       return result
     },
+    getCreatedStudent() {
+      return this.students
+    },
     getStudentDataById(studentId: number) {
       return this.students.filter((studentData) => studentData.id == studentId)
     }

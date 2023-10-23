@@ -22,15 +22,28 @@ const { message } = storeToRefs(store)
         :to="{ name: 'advisor-list' }"
         class="text-orange-600 hover:text-orange-800 text-lg font-bold"
       >
-        Advisors
+        Teachers
       </RouterLink>
       <RouterLink
         :to="{ name: 'create-advisor' }"
         class="text-orange-600 hover:text-orange-800 text-lg font-bold"
       >
-        Create Advisors
+        Create Teachers
       </RouterLink>
+
+      <RouterLink
+        :to="{ name: 'create-advisor' }"
+        class="text-orange-600 hover:text-orange-800 text-lg font-bold"
+      >
+        Create Students
+      </RouterLink>
+
+
+
+
     </nav>
+
+
   </header>
 
   <RouterView />
@@ -53,6 +66,6 @@ const { message } = storeToRefs(store)
 
 <style>
 body {
-  background-color: #3d3d3d;
+  background-color: #3c1149;
 }
 </style>

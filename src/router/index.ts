@@ -13,6 +13,7 @@ import AdvisorDetailView from '@/views/advisor/AdvisorDetailView.vue'
 import AdvisorService from '@/services/AdvisorService'
 import { useAdvisorStore } from '@/stores/advisor'
 import AdvisorCreatedDetailVue from '@/views/advisor/AdvisorCreatedDetail.vue'
+
 import NProgress from 'nprogress'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
