@@ -1,18 +1,54 @@
 <script>
-import { type AnnouncementItem } from '@/type'
-import { computed, ref, watchEffect, type Ref , onMounted } from 'vue';
-import AnnouncementService from '@/services/AnnouncementService';
-import NProgress from 'nprogress'
-import { onBeforeRouteUpdate, useRouter,useRoute  } from 'vue-router'
-import type { AxiosResponse } from 'axios';
-import {useAnnouncementStore} from '@/stores/announcement';
+export default {
+    data() {
+        return {
+            photos: [
+                'https://cdn.britannica.com/38/196638-131-7BF02881/Santa-Claus.jpg',
+                'https://hips.hearstapps.com/hmg-prod/images/christmas-facts-650b513919cd9.jpg?crop=1xw:0.8453434844192634xh;center,top&resize=1200:*',
+                'https://cdn.creatureandcoagency.com/uploads/2020/10/Facts-about-Chrismtas-5.jpg',
+                // Add more photo URLs here
+            ],
+            selectedPhoto: 0, // Initially select the first photo
+        };
+    },
+    methods: {
+        showPhoto(index) {
+            this.selectedPhoto = index;
+        },
+        closePhotoPopup() {
+            this.selectedPhoto = null;
+        },
+        nextPhoto() {
+            if (this.selectedPhoto < this.photos.length - 1) {
+                this.selectedPhoto++;
+            } else {
+                this.selectedPhoto = 0; // Loop back to the first photo
+            }
+        },
+        prevPhoto() {
+            if (this.selectedPhoto > 0) {
+                this.selectedPhoto--;
+            } else {
+                this.selectedPhoto = this.photos.length - 1; // Loop to the last photo
+            }
+        },
+    },
+};
 
-const router = useRouter
-const store = useStudentStore();
-const route = useRoute();
+// import { type AnnouncementItem } from '@/type'
+// import { computed, ref, watchEffect, type Ref , onMounted } from 'vue';
+// import AnnouncementService from '@/services/AnnouncementService';
+// import NProgress from 'nprogress'
+// import { onBeforeRouteUpdate, useRouter,useRoute  } from 'vue-router'
+// import type { AxiosResponse } from 'axios';
+// import {useAnnouncementStore} from '@/stores/announcement';
 
-const announcements: Ref<Array<AnnouncementItem>> = ref([])
-const totalAnnouncement = ref<number>(10)
+// const router = useRouter
+// const store = useStudentStore();
+// const route = useRoute();
+
+// const announcements: Ref<Array<AnnouncementItem>> = ref([])
+// const totalAnnouncement = ref<number>(10)
 </script>
 
 <template>
@@ -27,7 +63,7 @@ const totalAnnouncement = ref<number>(10)
             class="mt-5 mb-10 font-fig flex flex-col items-left justify-left p-3 w-3/4 sm:w-2/4 h-auto text-xl font-bold text-gray-900 bg-white border border-gray-300 rounded-lg shadow-md">
             <!-- Announcement Header with Photo, Name, Date, and Time -->
             <div class="flex items-center space-x-3">
-                <img src="src\assets\bodymoml.png" alt="Person's Photo" class="w-20 h-20 rounded-full">
+                <img src="src\assets\help.png" alt="Person's Photo" class="w-20 h-20 rounded-full">
                 <div>
                     <p class="font-fig font-semibold text-md">Uppahman</p>
                     <p class="font-fig text-sm font-semibold text-gray-600">Date: October 18, 2023</p>

@@ -14,7 +14,7 @@ const props = defineProps({
 })
 const store = useAdvisorStore()
 const messageStore = useMessageStore()
-export function createAdvisor(advisor: AdvisorInfo) {
+function createAdvisor(advisor: AdvisorInfo) {
   console.log('Before add advisor' + advisor.name)
   store.addAdvisor(advisor)
   messageStore.updateMessage('you are cookie pudๆ' + props.advisor?.name)
