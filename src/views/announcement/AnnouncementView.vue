@@ -3,9 +3,7 @@ export default {
     data() {
         return {
             photos: [
-                'https://cdn.britannica.com/38/196638-131-7BF02881/Santa-Claus.jpg',
-                'https://hips.hearstapps.com/hmg-prod/images/christmas-facts-650b513919cd9.jpg?crop=1xw:0.8453434844192634xh;center,top&resize=1200:*',
-                'https://cdn.creatureandcoagency.com/uploads/2020/10/Facts-about-Chrismtas-5.jpg',
+                
                 // Add more photo URLs here
             ],
             selectedPhoto: 0, // Initially select the first photo
@@ -72,8 +70,8 @@ const totalAnnouncement = ref<number>(10)
             </div>
             <!-- Announcement Details -->
             <div class="mt-5 flex flex-col pl-3">
-                <p class="font-fig font-semibold text-md">Christmas Event !</p>
-                <p class="font-fig text-md text-gray-600">Ho Ho Ho kriๆๆๆๆ</p>
+                <p class="font-fig font-semibold text-md"></p>
+                <p class="font-fig text-md text-gray-600"></p>
             </div>
             <!-- Photo slider -->
             <div class="mt-5  relative">
