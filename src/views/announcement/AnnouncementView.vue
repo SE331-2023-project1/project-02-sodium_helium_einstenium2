@@ -63,9 +63,7 @@ const totalAnnouncement = ref<number>(10)
             <div class="flex items-center space-x-3">
                 <img src="src\assets\help.png" alt="Person's Photo" class="w-20 h-20 rounded-full">
                 <div>
-                    <p class="font-fig font-semibold text-md">Uppahman</p>
-                    <p class="font-fig text-sm font-semibold text-gray-600">Date: October 18, 2023</p>
-                    <p class="font-fig text-sm font-semibold text-gray-600">Time: 10:00 AM</p>
+                    <p class="font-fig font-semibold text-md"></p>
                 </div>
             </div>
             <!-- Announcement Details -->
