@@ -106,4 +106,4 @@ const totalAnnouncement = ref<number>(10)
 
     </main>
 </template>
-  
+  @/services/announcement
