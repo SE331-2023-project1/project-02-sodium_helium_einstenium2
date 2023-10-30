@@ -29,3 +29,4 @@ function createAdvisor(advisor: AdvisorInfo) {
     <AdvisorCreateForm @create-submitted="createAdvisor"></AdvisorCreateForm>
   </div>
 </template>
+@/stores/teacher

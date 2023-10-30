@@ -32,3 +32,4 @@ const createAdvisor = computed(() => advisorStore.getCreatedAdvisorById(advisorI
   align-items: center;
 }
 </style>
+@/stores/teacher

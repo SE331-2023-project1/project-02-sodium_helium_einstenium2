@@ -28,3 +28,4 @@ const createAdvisors = computed(() => advisorStore.getCreatedAdvisor())
     </div>
   </main>
 </template>
+@/services/TeacherService@/stores/teacher

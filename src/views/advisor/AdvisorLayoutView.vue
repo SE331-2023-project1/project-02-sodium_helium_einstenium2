@@ -9,3 +9,4 @@ const advisor = storeToRefs(advisorStore).advisor
     <RouterView :advisor="advisor"></RouterView>
   </div>
 </template>
+@/stores/teacher
