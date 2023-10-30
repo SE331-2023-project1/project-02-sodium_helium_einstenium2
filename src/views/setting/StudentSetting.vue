@@ -62,7 +62,7 @@
         id="studentId"
         v-model="student.studentId"
         class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-        placeholder="e.g. 642115069"
+        placeholder="e.g. 642115048"
         required
          />
     </div>
@@ -74,7 +74,7 @@
         id="courses"
         v-model="student.courseList"
         class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-        placeholder="e.g. sci,math,history"
+        placeholder="e.g. history,Ethnobotany,Sexual Health Studies"
         required
         />
     </div>
@@ -98,7 +98,7 @@
         id="comment"
         v-model="student.comment"
         class="h-20 border mt-1 rounded px-4 pt-2 w-full bg-gray-50"
-        placeholder="e.g. Noob shit"
+        placeholder="e.g. WTF"
         required
          />
     </div>
