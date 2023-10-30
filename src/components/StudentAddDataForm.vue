@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import type { StudentInfo } from '@/info'
 import { reactive, type PropType } from 'vue'
 const { student } = defineProps({
@@ -47,4 +47,4 @@ function onSubmit() {
       />
     </div>
   </form>
-</template>
+</template> -->

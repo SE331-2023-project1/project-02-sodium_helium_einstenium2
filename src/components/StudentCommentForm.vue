@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import type { StudentInfo } from '@/info'
 import { reactive, type PropType } from 'vue'
 
@@ -59,4 +59,4 @@ function onSubmit() {
       />
     </div>
   </form>
-</template>
+</template> -->

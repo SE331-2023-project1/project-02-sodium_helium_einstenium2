@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import type { AdvisorInfo } from '@/info'
 import { type PropType } from 'vue'
 
@@ -32,4 +32,4 @@ defineProps({
   flex-direction: column;
   align-items: center;
 }
-</style>
+</style> -->

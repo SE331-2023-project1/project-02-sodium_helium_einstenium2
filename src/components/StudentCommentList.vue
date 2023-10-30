@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import type { CommentInfo } from '@/info'
 import type { PropType } from 'vue'
 defineProps({
@@ -14,4 +14,4 @@ defineProps({
     <p>{{ comment.comment }}</p>
     <h4>Date: {{ comment.date }}</h4>
   </div>
-</template>
+</template> -->

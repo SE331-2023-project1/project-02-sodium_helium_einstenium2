@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import type { AdvisorInfo } from '../info'
 import type { PropType } from 'vue'
 defineProps({
@@ -33,4 +33,4 @@ defineProps({
   transform: scale(1.01);
   box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
-</style>
+</style> -->
