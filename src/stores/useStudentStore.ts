@@ -83,7 +83,7 @@ export const useStudentStore = defineStore('student', {
             }
         },
         async fetchAllStudents() {
-            const response = await StudentService.getStudent();
+            const response = await StudentService.getStudents();
             if (response.status === 200) {
                 this.setStudents(response.data);
             }
