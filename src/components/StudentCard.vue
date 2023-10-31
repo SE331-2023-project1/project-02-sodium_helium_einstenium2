@@ -24,7 +24,7 @@ const truncate = (text: string) => {
       <div class="flex flex-col items-center p-10">
         <img class="w-24 h-24 object-cover mb-3 rounded-full shadow-lg" :src="student?.profileImage" alt="Bonnie image" />
         <div v-if="student">
-          <h5 class="mb-1 text-xl font-medium text-gray-900">
+          <h5 class="mb-1 text-xl font-medium text-orange-900">
             {{ truncate(student?.name) }} {{ truncate(student?.surname) }}
           </h5>
         </div>
