@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/multi-word-component-names -->
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
@@ -15,16 +16,20 @@ const updateIsExpanded = () => {
   isExpanded.value = window.innerWidth >= 650
 }
 
+// Call the function initially
 updateIsExpanded()
 
+// Add a resize event listener to update isExpanded value
 onMounted(() => {
   window.addEventListener('resize', updateIsExpanded)
 })
 
+// Clean up the event listener when the component is unmounted
 onUnmounted(() => {
   window.removeEventListener('resize', updateIsExpanded)
 })
 
+// highlight when student/techer -setting page
 const isSettingsPage = computed(() => {
   return route.name && ['student-setting', 'teacher-setting'].includes(route.name as string)
 })
@@ -39,7 +44,7 @@ const { message } = storeToRefs(messageStore)
     aria-label="Sidebar"
   >
     <div
-      :class="`h-full px-4 pb-8 overflow-hidden bg-gray-900 text-gray-500 ${
+      :class="`h-full px-4 pb-8 overflow-hidden bg-black text-orange-500 ${
         !isExpanded && 'hidden'
       }`"
     >
@@ -49,7 +54,7 @@ const { message } = storeToRefs(messageStore)
         </RouterLink>
 
         <button
-          class="py-2 px-3 rounded-lg bg-gray-900 -right-6 border border-white/20"
+          class="py-2 px-3 rounded-lg bg-gray-900 -right-6 border border-orange/20"
           @click="ToggleMenu"
         >
           <font-awesome-icon icon="bars" class="text-white" />
@@ -58,17 +63,17 @@ const { message } = storeToRefs(messageStore)
       <ul class="space-y-2 font-medium mt-4">
         <li>
           <RouterLink
-            :to="{ name: 'home' }"
-            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-gray-800 group"
+            :to="{ name: 'home-page' }"
+            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-yellow-800 group"
           >
             <font-awesome-icon icon="house" class="w-5 h-5" />
-            <span class="ml-3 text-sm">Home</span>
+            <span class="ml-3 text-sm">Home Page</span>
           </RouterLink>
         </li>
         <li>
           <RouterLink
             :to="{ name: 'student-list' }"
-            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-gray-800 group"
+            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-yellow-800 group"
           >
             <font-awesome-icon icon="user-graduate" class="w-5 h-5" />
             <span class="ml-3 text-sm">Students List</span>
@@ -77,7 +82,7 @@ const { message } = storeToRefs(messageStore)
         <li>
           <RouterLink
             :to="{ name: 'teacher-list' }"
-            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-gray-800 group"
+            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-yellow-800 group"
           >
             <font-awesome-icon icon="user-tie" class="w-5 h-5" />
             <span class="ml-3 text-sm">Advisors List</span>
@@ -86,7 +91,7 @@ const { message } = storeToRefs(messageStore)
         <li class="">
           <RouterLink
             :to="{ name: 'teacher-setting' }"
-            class="flex justify-between text-gray-500 hover:pl-4 hover:bg-gray-800 group rounded-lg"
+            class="flex justify-between text-orange-500 hover:pl-4 hover:bg-yellow-800 group rounded-lg"
             active-class="highlighted"
           >
             <div class="flex items-center p-2 rounded-lg" :class="{ highlighted: isSettingsPage }">
@@ -95,11 +100,11 @@ const { message } = storeToRefs(messageStore)
             </div>
           </RouterLink>
           <div class="pt-2 pl-4">
-            <ul class="flex flex-col pl-2 text-gray-500 border-l border-gray-700">
+            <ul class="flex flex-col pl-2 text-orange-500 border-l border-yellow-700">
               <li>
                 <RouterLink
                   :to="{ name: 'teacher-setting' }"
-                  class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-gray-800 hover:text-white"
+                  class="inline-block w-full px-4 py-2 text-xs rounded hover:bg-yellow-800 hover:text-white"
                   >Teachers
                 </RouterLink>
               </li>
@@ -109,7 +114,7 @@ const { message } = storeToRefs(messageStore)
         <li>
           <RouterLink
             :to="{ name: 'announcement-page' }"
-            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-gray-800 group"
+            class="flex items-center p-2 rounded-lg hover:pl-4 hover:bg-yellow-800 group"
           >
             <font-awesome-icon icon="user-tie" class="w-5 h-5" />
             <span class="ml-3 text-sm">Create Announcement</span>
