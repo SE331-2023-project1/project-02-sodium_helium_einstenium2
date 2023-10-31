@@ -1,9 +1,9 @@
 import axios from 'axios'
 import type { AxiosInstance, AxiosResponse } from 'axios'
-import type { StudentInfo } from '@/type'
+import type { StudentItem } from '@/type'
 
 const apiClient: AxiosInstance = axios.create({
-  baseURL: 'http://localhost:3004',
+  baseURL: import.meta.env.VITE_BASE_URL_STUDENT,
   withCredentials: false,
   headers: {
     Accept: 'application/json',
@@ -12,10 +12,7 @@ const apiClient: AxiosInstance = axios.create({
 })
 
 export default {
-  getStudent(perPage: number, page: number): Promise<AxiosResponse<StudentInfo[]>> {
-    return apiClient.get<StudentInfo[]>('/students?_limit=' + perPage + '&_page=' + page)
+  getStudents(): Promise<AxiosResponse<StudentItem[]>> {
+    return apiClient.get<StudentItem[]>('')
   },
-  getStudentById(id: number): Promise<AxiosResponse<StudentInfo>> {
-    return apiClient.get<StudentInfo>('students/' + id.toString())
-  }
 }
