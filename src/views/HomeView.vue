@@ -1,7 +1,6 @@
 <template>
   <main class="flex flex-col items-center justify-center">
-    <h1 class="text-3xl font-bold text-center">Welcome to our SE331 Project 1</h1>
-    <p class="my-5">This is our team members</p>
+    <h1 class="text-3xl font-bold text-center">Welcome to our Project</h1>
     <div class="grid lg:grid-cols-3 md:grid-cols-1 gap-24 gap-y-12 mt-14 max-[1111px]:gap-16">
       <div class="member">
         <img src="" alt="" class="h-48 rounded-full mb-4" />
