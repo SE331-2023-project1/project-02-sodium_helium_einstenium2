@@ -45,7 +45,7 @@ const { message } = storeToRefs(messageStore)
     >
       <div class="flex items-center justify-center mt-5">
         <RouterLink to="/" class="flex p-2.5 mr-2">
-          <img src="" class="" alt="Flowbite Logo" />
+          <img src="../assets/logo.png" class="" alt="Flowbite Logo" />
         </RouterLink>
 
         <button
