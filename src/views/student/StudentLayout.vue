@@ -1,44 +1,46 @@
 <script setup lang="ts">
+import type { Ref } from 'vue'
+import { type TeacherItem, type StudentItem } from '@/type'
+import { ref, type PropType } from 'vue'
+import { useRouter } from 'vue-router'
+import { useMessageStore } from '@/stores/message'
 import { useStudentStore } from '@/stores/student'
-import { useAdvisorStore } from '@/stores/advisor'
 import { storeToRefs } from 'pinia'
-import { ref } from 'vue'
 
-const studentStore = useStudentStore()
-const advisorStore = useAdvisorStore()
-const student = storeToRefs(studentStore).student
-const advisor = storeToRefs(advisorStore).advisor
-const id = ref(student.value?.id)
+const router = useRouter()
+const store = useStudentStore()
+const students = storeToRefs(store).students
+const student = ref<StudentItem | null>(null)
+const teacher = ref<TeacherItem | null>(null)
+
+
+
+const props = defineProps({
+  id: String
+})
+
+store
+  .getStudentById(props.id!)
+  .then((result) => {
+    if (result) {
+      student.value = result
+    }
+  })
+  .catch((error) => {
+    console.error(error)
+  })
+
+store.getTeacherInStudent(props.id!)?.then((result) => {
+  if (result) {
+    teacher.value = result
+  }
+})
 </script>
+
 <template>
-  <div v-if="student" class="min-h-screen bg-black-100">
-    <div class="bg-orange shadow-md">
-      <div class="container mx-auto py-4 flex justify-center items-center">
-        <router-link
-          :to="{ name: 'student-detail', params: { id } }"
-          class="text-orange-500 hover:text-gray-900 mx-4 font-semibold"
-          >Student Detail</router-link
-        >
-        <router-link
-          :to="{ name: 'student-add', params: { id } }"
-          class="text-orange-500 hover:text-gray-900 mx-4 font-semibold"
-          >Add Student Data</router-link
-        >
-        <router-link
-          :to="{ name: 'student-comment', params: { id } }"
-          class="text-orange-500 hover:text-gray-900 mx-4 font-semibold"
-          >Add Comment</router-link
-        >
-      </div>
+  <div>
+    <div v-if="student">
+      <RouterView :oneStudent="student" :oneTeacher="teacher"></RouterView>
     </div>
-    <router-view :student="student" :advisor="advisor"></router-view>
   </div>
 </template>
-<style scoped></style>
-
-<style>
-body {
-  color: white;
-}
-</style>
-@/stores/teacher

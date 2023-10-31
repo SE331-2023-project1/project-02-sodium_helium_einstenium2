@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import InputText from '@/components/InputText.vue'
 import { useField, useForm } from 'vee-validate'
-import * as yee from 'yee'
-const validationSchema = yee.object({
-  username: yee.string().required('The username is required'),
-  password: yee.string().required('The password is required'),
-  firstName: yee.string().required('The first name is required'),
-  lastName: yee.string().required('The last name is required'),
-  email: yee.string().email('The email is required'),
+import * as yup from 'yup'
+const validationSchema = yup.object({
+  username: yup.string().required('The username is required'),
+  password: yup.string().required('The password is required'),
+  firstName: yup.string().required('The first name is required'),
+  lastName: yup.string().required('The last name is required'),
+  email: yup.string().email('The email is required'),
 })
 
 const { errors, handleSubmit } = useForm({
@@ -42,8 +42,6 @@ const onSubmit = handleSubmit((values) => {
     <div>
       <h2 class="font-semibold text-xl text-gray-600">Create new Advisor</h2>
       <p class="text-gray-500 mb-6">This form is used to create New advisor id</p>
-
-      <!-- Form for advisor data -->
       <form @submit.prevent="onSubmit">
         <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
           <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-2">
