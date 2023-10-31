@@ -159,4 +159,10 @@ template {
 .highlighted {
   color: white;
 }
+
+</style>
+<style>
+body {
+  background-color: #313131;
+}
 </style>
