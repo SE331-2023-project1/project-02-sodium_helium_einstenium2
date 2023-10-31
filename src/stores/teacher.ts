@@ -21,7 +21,6 @@ export const useTeacherStore = defineStore('teacher', {
                     resolve(teacher);
                 } else {
                     const error = new Error('Teacher not found');
-                    // Custom status for the error
                     (error as any).status = 404;
                     reject(error);
                 }
