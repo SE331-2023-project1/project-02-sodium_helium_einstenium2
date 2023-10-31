@@ -1,7 +1,7 @@
 <template>
     <div>
-      <h2 class="font-semibold text-xl text-gray-600">Add Student</h2>
-      <p class="text-gray-500 mb-6">This form is used to add new student to the list.</p>
+      <h2 class="font-semibold text-xl text-orange-600">Add Student</h2>
+      <p class="text-yellow-500 mb-6">This form is used to add new student to the list.</p>
   
     <form @submit.prevent="submitForm">
     <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
@@ -37,7 +37,7 @@
             name="firstName"
             id="firstName"
             v-model="student.name"
-            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+            class="h-10 border mt-1 rounded px-4 w-full bg-yellow-100"
             required
          />
     </div>
@@ -49,7 +49,7 @@
         name="lastName"
         id="lastName"
         v-model="student.surname"
-        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+        class="h-10 border mt-1 rounded px-4 w-full bg-yellow-50"
         required
          />
     </div>
@@ -61,7 +61,7 @@
         name="studentId"
         id="studentId"
         v-model="student.studentId"
-        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+        class="h-10 border mt-1 rounded px-4 w-full bg-yellow-50"
         placeholder="e.g. 642115048"
         required
          />
@@ -73,7 +73,7 @@
         name="courses"
         id="courses"
         v-model="student.courseList"
-        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+        class="h-10 border mt-1 rounded px-4 w-full bg-yellow-50"
         placeholder="e.g. history,Ethnobotany,Sexual Health Studies"
         required
         />
@@ -85,7 +85,7 @@
         name="teacherId"
         id="teacherId"
         v-model="student.teacherId"
-        class="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
+        class="h-10 border mt-1 rounded px-4 w-full bg-yellow-50"
         required
          />
         </div>
@@ -97,7 +97,7 @@
         name="comment"
         id="comment"
         v-model="student.comment"
-        class="h-20 border mt-1 rounded px-4 pt-2 w-full bg-gray-50"
+        class="h-20 border mt-1 rounded px-4 pt-2 w-full bg-yellow-50"
         placeholder="e.g. WTF"
         required
          />

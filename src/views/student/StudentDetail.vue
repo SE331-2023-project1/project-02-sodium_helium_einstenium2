@@ -63,7 +63,7 @@ const onSubmit = () => {
                 >
                   <li v-for="(course, index) in oneStudent?.courseList" :key="index">
                     <div
-                      class="bg-transparent text-sm p-2 mr-2 cursor-pointer bg-white border border-gray-200 rounded-lg shadow"
+                      class="bg-transparent text-sm p-2 mr-2 cursor-pointer bg-black border border-orange-200 rounded-lg shadow"
                     >
                       {{ course }}
                     </div>
@@ -75,7 +75,7 @@ const onSubmit = () => {
                   class="w-fit flex"
                 >
                   <div
-                    class="w-fit px-3 py-2 flex items-center bg-white border border-gray-200 rounded-lg shadow hover:shadow-md"
+                    class="w-fit px-3 py-2 flex items-center bg-black border border-orange-200 rounded-lg shadow hover:shadow-md"
                   >
                     <img
                       class="w-16 h-16 rounded-full mr-4 object-cover"
@@ -96,7 +96,7 @@ const onSubmit = () => {
         </div>
       </div>
       <div class="flex flex-col items-center justify-center my-12">
-        <span class="text-xl text-gray-600 mb-8 underline underline-offset-2 decoration-[#42b883]"
+        <span class="text-xl text-gray-600 mb-8 underline underline-offset-2 decoration-[#1f3edd]"
           >Comments</span
         >
         <div class="text-gray-600">
@@ -121,7 +121,7 @@ const onSubmit = () => {
 
       <form @submit.prevent="onSubmit">
         <div
-          class="w-full border border-gray-200 rounded-lg bg-gray-50"
+          class="w-full border border-orange-200 rounded-lg bg-orange-50"
         >
           <div class="px-4 py-2 bg-white rounded-t-lg">
             <label for="comment" class="sr-only">Your comment</label>
@@ -129,7 +129,7 @@ const onSubmit = () => {
               id="comment"
               rows="4"
               v-model="student.comment"
-              class="w-full px-0 text-sm text-gray-900 bg-white border-0"
+              class="w-full px-0 text-sm text-green-900 bg-white border-0"
               placeholder="Write a comment..."
               required
             >
