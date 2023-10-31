@@ -66,9 +66,7 @@ const student = reactive<StudentType>({
   name: receivedStudent.name,
   surname: receivedStudent.surname,
   studentId: receivedStudent.studentId,
-  // courseList: receivedStudent.courseList.map(course => `"${course}"`).join(','),
   courseList: receivedStudent.courseList ? receivedStudent.courseList.join(',') : '',
-  // courseList: [{}],
   courseListDisplay: receivedStudent.courseList ? receivedStudent.courseList.map(course => `"${course}"`).join(',') : '',
   teacherId: receivedStudent.teacherId,
   comment: receivedStudent.comment,
@@ -149,5 +147,11 @@ const validateForm = () => {
 
 input {
   border: 1px solid red;
+}
+</style>
+
+<style>
+body {
+  background-color: #313131;
 }
 </style>

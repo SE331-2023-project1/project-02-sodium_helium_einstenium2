@@ -44,3 +44,8 @@ const truncate = (text: string) => {
   </RouterLink>
 </template>
 
+<style>
+body {
+  background-color: #313131;
+}
+</style>

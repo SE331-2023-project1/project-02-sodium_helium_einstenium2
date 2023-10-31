@@ -148,3 +148,9 @@ const onSubmit = () => {
     </div>
   </div>
 </template>
+
+<style>
+body {
+  background-color: #313131;
+}
+</style>

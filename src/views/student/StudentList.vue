@@ -67,7 +67,7 @@ const totalPages = computed(() => {
           {{ pageNumber }}
         </RouterLink>
         <span v-else
-          class="z-10 flex items-center justify-center px-4 h-10 leading-tight text-[#27a26f] border border-[#7ed7ac] bg-[#d6f5e2] hover:bg-[#b1e9ca] hover:text-[#188359] cursor-pointer">{{
+          class="z-10 flex items-center justify-center px-4 h-10 leading-tight text-[#1f3edd] border border-[#1f3edd] bg-[#d6d6f5] hover:bg-[#d6d6f5] hover:text-[#1f3edd] cursor-pointer">{{
             pageNumber }}</span>
       </span>
       <RouterLink :to="{ name: 'student-list', query: { page: page + 1, limit: limit } }" rel="next" v-if="hasNextPage"
@@ -80,3 +80,9 @@ const totalPages = computed(() => {
     </div>
   </main>
 </template>
+
+<style>
+body {
+  background-color: #313131;
+}
+</style>

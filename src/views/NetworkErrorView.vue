@@ -15,3 +15,9 @@ const router = useRouter()
         <p>Please try again later.</p>
     </div>
 </template>
+
+<style>
+body {
+  background-color: #313131;
+}
+</style>

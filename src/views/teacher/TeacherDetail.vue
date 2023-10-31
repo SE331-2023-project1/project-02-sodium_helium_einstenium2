@@ -52,3 +52,9 @@ const { manyStudent, oneTeacher } = defineProps<{
     </div>
   </div>
 </template>
+
+<style>
+body {
+  background-color: #313131;
+}
+</style>

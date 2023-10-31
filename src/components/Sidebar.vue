@@ -57,7 +57,7 @@ const { message } = storeToRefs(messageStore)
           class="py-2 px-3 rounded-lg bg-gray-900 -right-6 border border-orange/20"
           @click="ToggleMenu"
         >
-          <font-awesome-icon icon="bars" class="text-white" />
+          <font-awesome-icon icon="bars" class="text-orange" />
         </button>
       </div>
       <ul class="space-y-2 font-medium mt-4">

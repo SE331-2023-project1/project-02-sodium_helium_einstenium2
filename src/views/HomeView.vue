@@ -22,3 +22,9 @@
   </main>
 </template>
 @/type
+
+<style>
+body {
+  background-color: #313131;
+}
+</style>

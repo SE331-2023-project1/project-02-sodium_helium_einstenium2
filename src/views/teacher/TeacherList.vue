@@ -101,3 +101,9 @@ const totalPages = computed(() => {
     </div>
   </main>
 </template>
+
+<style>
+body {
+  background-color: #313131;
+}
+</style>
